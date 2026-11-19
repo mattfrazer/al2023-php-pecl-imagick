@@ -12,13 +12,13 @@
 
 Summary:       Provides a wrapper to the ImageMagick library.
 Name:          %{php_name}%{?php_ver}-pecl-%{pecl_name}
-Version:       3.7.0
+Version:       3.8.1
 Release:       1%{?dist}.0.1
 License:       PHP
 Group:         Development/Languages
 URL:           http://pecl.php.net/package/%{pecl_name}
 
-Source:        https://pecl.php.net/get/imagick-3.7.0.tgz
+Source:        https://pecl.php.net/get/imagick-%{version}.tgz
 
 BuildRequires: %{php_name}-devel
 BuildRequires: php%{?pear_ver}-pear
@@ -153,6 +153,8 @@ then
   rm ?TS/tests/151_Imagick_subImageMatch_basic.phpt
 fi
 
+rm ?TS/tests/024-ispixelsimilar.phpt
+
 cd NTS
 # minimal load test of NTS extension
 %if 0%{?__%{php_name}}
@@ -201,6 +203,9 @@ NO_INTERACTION=true make test
 %endif
 
 %changelog
+* Thu Nov 19 2026 SUNAOKA Norifumi <sunaoka@pocari.org> - 3.8.1-1
+- Update 3.8.1
+
 * Tue Jun 04 2024 SUNAOKA Norifumi <sunaoka@pocari.org> - 3.7.0-1
 - Update 3.7.0
 

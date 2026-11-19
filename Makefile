@@ -1,4 +1,4 @@
-IMAGICK_VERSION := 3.7.0
+IMAGICK_VERSION := 3.8.1
 
 IMAGE := php-pecl-imagick-builder
 
@@ -10,9 +10,13 @@ MOUNT := -v ./rpmbuild/SOURCES:/root/rpmbuild/SOURCES \
 TARGET := build-arm64-8.1 \
           build-arm64-8.2 \
           build-arm64-8.3 \
+          build-arm64-8.4 \
+          build-arm64-8.5 \
           build-amd64-8.1 \
           build-amd64-8.2 \
-          build-amd64-8.3
+          build-amd64-8.3 \
+          build-amd64-8.4 \
+          build-amd64-8.5
 
 all: build
 
